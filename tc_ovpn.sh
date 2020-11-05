@@ -2,7 +2,7 @@
 echo "Updating Your Machine"
 apt update -y && apt upgrade -y > /dev/null
 echo "Finding your Public IP" 
-PUB_IP= `curl -q ifconfig.me`
+PUB_IP=`curl -q ifconfig.me`
 echo $PUB_IP > ./pub_ip.var
 echo "Your Public IP is: $PUB_IP  Please take note of this."
 curl https://git.io/vpn -o ./openvpn-install.sh
