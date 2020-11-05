@@ -5,7 +5,7 @@ echo "Finding your Public IP"
 PUB_IP=`curl -q ifconfig.me &> /dev/null`
 echo $PUB_IP > ./pub_ip.var
 echo "Your Public IP is: $PUB_IP.  Please take note of this."
-curl https://git.io/vpn -o ./openvpn-install.sh &> /dev/null
+curl -sSL https://git.io/vpn -o ./openvpn-install.sh &> /dev/null
 chmod +x ./openvpn-install.sh
 ./openvpn-install.sh
 #Starting and Enabling ovpn service 
